@@ -23,6 +23,16 @@ public class Generics {
 
     }
 
+    public String maxString(String str1, String str2, String str3){
+        String max = str1;
+        if (str2.compareTo(max) > 0 ){
+            max = str2;
+        } if (str3.compareTo(max) > 0 ){
+            max = str3;
+        }
+        return max;
+    }
+
 
     public static void main(String[] args) {
         System.out.println("*******welcome to generics code tested By JUnit***** ");
@@ -35,6 +45,11 @@ public class Generics {
         float float1 = 2.5f, float2 = 3.5f , float3 = 4.5f;
         float result1 = generics.maxValueFloat(float1,float2,float3);
         System.out.println("the max vale of "+float1+" , "+float2+" & "+ float3+ " is :: "+ result1);
+
+        String str1="Hello", str2 = "hello anzar" , str3 = "hello anzar How are you";
+        String result2 = generics.maxString(str1,str2,str3);
+        System.out.println("the max vale of ("+str1+") , ("+str2+") & ("+str3+ ") is :: "+ result2);
+
 
 
     }
